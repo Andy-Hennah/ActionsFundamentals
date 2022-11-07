@@ -19,6 +19,7 @@ jobs:
 #    steps:
 #     - run: echo The tags are ${{ inputs.tags }} 
   c:
+    name: CCC
     runs-on: ubuntu-latest
     steps:
     - run: echo "Hello world"
