@@ -9,11 +9,10 @@ jobs:
     name: Print Context
     runs-on: ubuntu-latest
     steps:
-    - run: echo "Hello world"
-#      - env:
-#          EVENT_CONTEXT: ${{ toJSON(github.event) }}
+      - env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
 #      - run: echo Triggered by ${{ github.event }} 
-#      - run: |
+        run: |
 #          echo $EVENT_CONTEXT
 #  b:
 #    runs-on: ubuntu-latest
