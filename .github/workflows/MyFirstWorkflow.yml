@@ -18,7 +18,7 @@ jobs:
 #    runs-on: ubuntu-latest
 #    steps:
 #     - run: echo The tags are ${{ inputs.tags }} 
-#  c:
-#    runs-on: ubuntu-latest
-#    steps:
-#     - run: echo "Hello world"
+  c:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Hello world"
