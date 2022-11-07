@@ -7,11 +7,18 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
+  WhatTriggeredTheWorkflow:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello world"
-      - run: mkdir myfolder
-      - run: ls
-
-
+      - env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
+      - run: echo Triggered by ${{ github.event }} 
+      - run: echo $EVENT_CONTEXT
+  NameOfBranch:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo The tags are ${{ inputs.tags }} 
+  ListOfRepo:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "Hello world"
