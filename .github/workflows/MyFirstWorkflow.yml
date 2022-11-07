@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: MyFirstWorkflow
 on: 
   - push
@@ -8,13 +6,15 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   print-context:
+    name: Print Context
     runs-on: ubuntu-latest
     steps:
-      - env:
-          EVENT_CONTEXT: ${{ toJSON(github.event) }}
+    - run: echo "Hello world"
+#      - env:
+#          EVENT_CONTEXT: ${{ toJSON(github.event) }}
 #      - run: echo Triggered by ${{ github.event }} 
-      - run: |
-          echo $EVENT_CONTEXT
+#      - run: |
+#          echo $EVENT_CONTEXT
 #  b:
 #    runs-on: ubuntu-latest
 #    steps:
